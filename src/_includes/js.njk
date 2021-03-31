@@ -1,0 +1,43 @@
+<script src="/js/zenscroll.min.js"></script>
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@4"></script>
+<script>
+  function navToggle() {
+    var btn = document.getElementById('menuBtn');
+    var nav = document.getElementById('menu');
+
+    btn.classList.toggle('open');
+    nav.classList.toggle('flex');
+    nav.classList.toggle('hidden');
+  }
+
+  window.addEventListener('scroll', function () {
+    var btt = document.getElementById('btt');
+
+    if (window.scrollY >= 1080) {
+      btt.classList.remove('hidden');
+      btt.classList.add('block');
+    } else {
+      btt.classList.add('hidden');
+      btt.classList.remove('block');
+    }
+  });
+
+  console.log('Code/Design: ttntm.me'); // credit where credit is due
+
+  zenscroll.setup(1250, 0);
+
+  const template = document.getElementById('followTip');
+  const container = document.createElement('div');
+
+  container.appendChild(document.importNode(template.content, true));
+
+  tippy('#follow', {
+    content: container.innerHTML,
+    animation: 'scale',
+    duration: 250,
+    arrow: true,
+    placement: 'bottom',
+    interactive: true,
+  });
+</script>

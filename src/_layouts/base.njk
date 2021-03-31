@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+<head>
+  {% include "head.njk" %}
+</head>
+<body class="font-sans text-gray-800 bg-gray-100">
+  <a id="top"></a><!-- TOP anchor -->
+  {{ content | safe }}
+  {% include "footer.njk" %}
+  {% include "js.njk" %}
+</body>
+</html>

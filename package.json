@@ -1,0 +1,20 @@
+{
+  "name": "11ty-landing-page",
+  "version": "0.0.1",
+  "description": "A simple landing page built with 11ty and Windi CSS",
+  "scripts": {
+    "serve": "eleventy --serve",
+    "deploy": "eleventy"
+  },
+  "author": "ttntm",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
+    "cssnano": "^4.1.10",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.2.9",
+    "postcss-import": "^14.0.0",
+    "tailwindcss": "^2.0.4"
+  }
+}

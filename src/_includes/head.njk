@@ -1,0 +1,26 @@
+
+{%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(site.url) }}{%- endset -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" href="/css/page.css" as="style">
+<link rel="preload" href="/js/zenscroll.min.js" as="script">
+<!-- PRELOAD CDN SCRIPTS -->
+<link rel="preconnect" href="https://unpkg.com/popper.js@1" as="script">
+<link rel="preconnect" href="https://unpkg.com/tippy.js@4" as="script">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="{{ description or site.description }}">
+<meta name="author" content="{{ site.author }}">
+<meta name="robots" content="index,follow">
+<!-- BEGIN SOCIAL META DATA -->
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ title or site.title }}">
+<meta property="og:description" content="{{ description  or site.description }}">
+<meta property="og:url" content="{{ absolutePageUrl }}">
+<meta name="twitter:card" content="{% if image -%}summary_large_image{% else %}summary{% endif %}">
+{%- if image -%}
+  <meta property="og:image" content="{{ image | url | absoluteUrl(site.url) }}">
+{%- endif -%}
+<!-- ./END SOCIAL META DATA -->
+<meta name="theme-color" content="#ffffff">
+<title>{{ title or site.title }} | {{ site.author }}</title>
+<link rel="stylesheet" href="/css/page.css">
