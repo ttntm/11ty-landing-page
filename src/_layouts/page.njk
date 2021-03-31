@@ -1,0 +1,20 @@
+---
+layout: base.njk
+---
+<style>
+  h1, h2, h3, h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+</style>
+<header>
+  {% include "navbar.njk" %}
+</header>
+<main id="{{ title }}" class="w-full flex flex-col justify-center items-center">
+  <div class="self-center w-full sm:w-2/3 xl:w-1/2 px-4 sm:px:0 pt-16">
+    <h1 class="font-bold uppercase tracking-widest text-gray-800 text-2xl mb-4">{{ title }}</h1>
+    <div class="font-light text-black text-lg">
+      {{ content | safe }}
+    </div>
+  </div>
+</main>

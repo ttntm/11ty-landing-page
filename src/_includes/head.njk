@@ -1,4 +1,3 @@
-
 {%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(site.url) }}{%- endset -%}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,3 +23,7 @@
 <meta name="theme-color" content="#ffffff">
 <title>{{ title or site.title }} | {{ site.author }}</title>
 <link rel="stylesheet" href="/css/page.css">
+{% if not isFront %}
+  <!-- include Normalize for regular text pages -->
+  <link rel="stylesheet"  href="/css/normalize.min.css">
+{% endif %}
