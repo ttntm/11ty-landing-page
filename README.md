@@ -9,7 +9,7 @@ A simple landing page built with 11ty and Tailwind CSS.
 **Requirements:**
 
 1. Eleventy (developed and tested with version 0.12.1)
-2. Tailwind CSS (@2.0.4 - see #2)
+2. Tailwind CSS (@2.0.4 - see [#2](https://github.com/ttntm/11ty-landing-page/issues/2))
 
 All other dependencies are either linked from a CDN or included in this repository.
 
