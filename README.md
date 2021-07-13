@@ -9,7 +9,7 @@ A simple landing page built with 11ty and Tailwind CSS.
 **Requirements:**
 
 1. Eleventy (developed and tested with version 0.12.1)
-2. Tailwind CSS (@2.0.4 - see [#2](https://github.com/ttntm/11ty-landing-page/issues/2))
+2. Tailwind CSS
 
 All other dependencies are either linked from a CDN or included in this repository.
 
@@ -27,7 +27,7 @@ All other dependencies are either linked from a CDN or included in this reposito
 2. Tailwind -> `./tailwind.config.js`
 3. Netlify -> `./netlify.toml`
 
-CSS is built via PostCSS and based on `./src/_includes/css/_page.css`. Building CSS gets triggered by `./src/css/page.11ty.js`.
+CSS is built via PostCSS and based on `./src/_includes/css/_page.css`. Building CSS gets triggered by `./src/css/page.11ty.js` and Tailwind's config is set to JIT (see: [Tailwind docs](https://tailwindcss.com/docs/just-in-time-mode))
 
 Please note that this CSS build _does not_ include the `normalize.css` file used for the 2 regular pages (imprint, privacy) - a minified production version is stored in `./src/static/css` and gets included in the build by default.
 
