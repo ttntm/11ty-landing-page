@@ -2,7 +2,7 @@
   class="flex flex-col sm:flex-row w-full justify-between items-center px-4 sm:px-6 py-1 bg-white sm:bg-transparent shadow sm:shadow-none">
   <div
     class="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center">
-    <a href="./" class="no-underline"><img src="./img/logo.svg" alt="AWE.SOME Logo"
+    <a href="{{ env.baseUrl }}" class="no-underline"><img src="{{ env.baseUrl }}img/logo.svg" alt="AWE.SOME Logo"
         class="h-12 py-1"></a>
     <button id="menuBtn" class="hamburger block sm:hidden focus:outline-none" type="button" onclick="navToggle();" aria-label="Show Menu"><span
         class="hamburger__top-bun"></span><span class="hamburger__bottom-bun"></span></button>

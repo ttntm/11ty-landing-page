@@ -1,7 +1,7 @@
 {%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(site.url) }}{%- endset -%}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preload" href="./css/page.css" as="style">
+<link rel="preload" href="{{ env.baseUrl }}css/page.css" as="style">
 <!-- PRELOAD CDN SCRIPTS -->
 <link rel="preconnect" href="https://unpkg.com/popper.js@1" as="script">
 <link rel="preconnect" href="https://unpkg.com/tippy.js@4" as="script">
@@ -21,8 +21,8 @@
 <!-- ./END SOCIAL META DATA -->
 <meta name="theme-color" content="#ffffff">
 <title>{{ title or site.title }} | {{ site.author }}</title>
-<link rel="stylesheet" href="./css/page.css">
+<link rel="stylesheet" href="{{ env.baseUrl }}css/page.css">
 {% if not isFront %}
   <!-- include Normalize for regular text pages -->
-  <link rel="stylesheet"  href="./css/normalize.min.css">
+  <link rel="stylesheet"  href="{{ env.baseUrl }}css/normalize.min.css">
 {% endif %}
