@@ -1,6 +1,5 @@
 .env
 public/
-package-lock.json
 
 # Logs
 logs
