@@ -2,6 +2,9 @@ const htmlmin = require("html-minifier");
 const markdownIt = require('markdown-it');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
+const isPages = process.env.ELEVENTY_ENV === 'pages'
+const outDir = isPages ? 'docs' : 'public'
+
 module.exports = function (eleventyConfig) {
   // PLUGINS
   eleventyConfig.addPlugin(pluginRss);
@@ -52,7 +55,7 @@ module.exports = function (eleventyConfig) {
   return {
     dir: {
       input: 'src',
-      output: 'docs',
+      output: outDir,
       data: './_data',
       includes: './_includes',
       layouts: './_layouts'

@@ -4,7 +4,8 @@
   "description": "A simple landing page built with 11ty and Tailwind CSS",
   "scripts": {
     "serve": "ELEVENTY_ENV=dev eleventy --serve",
-    "deploy": "eleventy"
+    "deploy": "eleventy",
+    "deploy-pgs": "ELEVENTY_ENV=pages eleventy"
   },
   "author": "ttntm",
   "license": "MIT",
