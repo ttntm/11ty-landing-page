@@ -14,7 +14,6 @@
 <meta property="og:title" content="{{ title or site.title }}">
 <meta property="og:description" content="{{ description  or site.description }}">
 <meta property="og:url" content="{{ absolutePageUrl }}">
-<meta name="twitter:card" content="{% if image -%}summary_large_image{% else %}summary{% endif %}">
 {%- if image -%}
   <meta property="og:image" content="{{ image | url | absoluteUrl(site.url) }}">
 {%- endif -%}
