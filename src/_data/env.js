@@ -1,6 +1,6 @@
 const isPages = process.env.ELEVENTY_ENV === 'pages'
 
-module.exports = {
+export default {
   baseUrl: isPages
     ? '/11ty-landing-page/'
     : '/'
