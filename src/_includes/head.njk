@@ -1,4 +1,7 @@
-{%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(site.url) }}{%- endset -%}
+{%- set absolutePageUrl -%}
+  {{- page.url | htmlBaseUrl(site.url) -}}
+{%- endset -%}
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preload" href="{{ env.baseUrl }}css/page.css" as="style">
@@ -15,7 +18,7 @@
 <meta property="og:description" content="{{ description  or site.description }}">
 <meta property="og:url" content="{{ absolutePageUrl }}">
 {%- if image -%}
-  <meta property="og:image" content="{{ image | url | absoluteUrl(site.url) }}">
+  <meta property="og:image" content="{{ image | url | htmlBaseUrl(site.url) }}">
 {%- endif -%}
 <!-- ./END SOCIAL META DATA -->
 <meta name="theme-color" content="#ffffff">
